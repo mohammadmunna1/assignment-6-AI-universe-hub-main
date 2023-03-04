@@ -50,3 +50,13 @@ const displayAiInformation = (info, dataLimit, sortDataByDate) => {
         toggleSpinner(false);
     });
 }
+// Spinner
+const toggleSpinner = isLoading => {
+    const spinnerSection = document.getElementById('spinner');
+    if (isLoading) {
+        spinnerSection.classList.remove('d-none');
+    }
+    else {
+        spinnerSection.classList.add('d-none');
+    }
+}
