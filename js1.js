@@ -83,3 +83,60 @@ const loadAiInformationById = async (id) => {
 }
 
 
+//Display single fetched data by id
+const displayAiInformationById = (info) => {
+    console.log(info);
+    console.log(info.features);
+
+    const aiDetails = document.getElementById('ai-details');
+    aiDetails.innerHTML = `
+        <div class="border border-danger-subtle rounded-2 p-3" style="width: 100%; background-color: #f5dfcf57;">
+                    <p class="fs-4 fw-bold text-center">${info.description ? info.description : 'Description Unavailable'}</p>
+                    <div class="d-flex justify-content-center align-items-center gap-3">
+                        <div class="rounded-2 bg-white p-1 p-md-3 text-center text-success fw-semibold">
+                            <p>${info.pricing ? info.pricing[0].price : 'Free of Cost/'}</p>
+                            <p>${info.pricing ? info.pricing[0].plan : 'Basic'}</p>
+                        </div>
+                        <div class="rounded-2 bg-white  p-1 p-md-3 text-center text-primary fw-semibold">
+                            <p>${info.pricing ? info.pricing[1].price : 'Free of Cost/'}</p>
+                            <p>${info.pricing ? info.pricing[1].plan : 'Pro'}</p>
+                        </div>
+                        <div class="rounded-2 bg-white  p-1 p-md-3 text-center text-warning fw-semibold">
+                            <p>${info.pricing ? info.pricing[2].price : 'Free of Cost/'}</p>
+                            <p>${info.pricing ? info.pricing[2].plan : 'Enterprise'}</p>
+                        </div>
+                    </div>
+            
+                    <div class="mt-3 d-flex justify-content-around gap-3 text-start">
+                        <div class=" p-2">
+                            <h3 class="fs-3 fw-semibold">Features</h3>
+                            <ul id="feature">
+                            
+                            
+                            </ul>
+                        </div>
+
+                        <div class=" p-2">
+                            <h3 class="fs-3 fw-semibold">Integrations </h3>
+                            <ul id="integration">
+                                
+
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                <div class="border border-secondary-subtle rounded-2 p-3" style="width: 100%">
+                        <div class="d-flex justify-content-center position-relative">
+                            <img src="${info.image_link[0]}" class="img-fluid rounded-2">
+                            <div style="position:absolute; top: 1%; right:1%; transform: translate(-1%, -1%);" id="btn-accuracy" >
+                            
+                            </div>
+                        </div>
+                        <h3 class="mt-3 fs-3 fw-semibold">${info.input_output_examples ? info.input_output_examples[0].input : 'Can you give any example?'}</h3>
+                        <p>${info.input_output_examples ? info.input_output_examples[0].output : 'No! Not Yet! Take a break!!!'}</p>
+                    </div>
+        `
+
+
+
+
