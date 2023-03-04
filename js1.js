@@ -137,6 +137,12 @@ const displayAiInformationById = (info) => {
                     </div>
         `
 
-
+//Pushing list items
+const feature = document.getElementById('feature');
+for (let i = 0; i < Object.keys(info.features).length; i++) {
+    const listItem = document.createElement('li');
+    listItem.innerText = `${Object.values(info.features)[i].feature_name}`
+    feature.appendChild(listItem);
+}
 
 
