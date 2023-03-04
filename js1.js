@@ -161,4 +161,17 @@ else {
     integration.appendChild(listItem);
 }
 
+//Pushing data in btn-accuracy
+const btnAccuracy = document.getElementById('btn-accuracy');
+const accuracyDiv = document.createElement('div');
+accuracyDiv.classList.add('bg-danger', 'text-white', 'py-1', 'px-3', 'rounded-2', 'mt-2')
+if (info.accuracy.score !== null) {
+    accuracyDiv.innerHTML = `
+        ${info.accuracy.score * 100 + ' % Accuracy'}
+        `
+    btnAccuracy.appendChild(accuracyDiv);
+}
+}
 
+//Loading
+loadAiInformation(6);
