@@ -9,3 +9,10 @@ const loadAiInformation = (dataLimit) => {
         })
         .catch(error => console.log(error));
 }
+
+
+
+const displayAiInformation = (info, dataLimit, sortDataByDate) => {
+
+    const seeMoreButton = document.getElementById('see-more-button');
+    const cardContainer = document.getElementById('card-container');
