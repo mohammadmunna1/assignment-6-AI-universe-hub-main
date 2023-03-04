@@ -68,3 +68,18 @@ document.getElementById('see-more-button').addEventListener('click', function ()
     cardContainer.textContent = '';
     loadAiInformation();
 })
+
+//Fetch operation
+const loadAiInformationById = async (id) => {
+    try {
+        const url = `https://openapi.programming-hero.com/api/ai/tool/${id}`;
+        const res = await fetch(url);
+        const data = await res.json();
+        displayAiInformationById(data.data);
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+
+
