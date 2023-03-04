@@ -19,7 +19,7 @@ function processData(data) {
                             <p>${data.name}</p>
                             <p><i class="fa-regular fa-calendar-days"></i> ${data.published_in}</p>
                         </div>
-                        <button onclick= "loadAiInformationById('${data.id}')" href="#" class="button" data-bs-toggle="modal" data-bs-target="#aiDetailModal"><i class="fa-solid fa-arrow-right"></i></button>
+                        <button onclick= "loadAiInformationById('${data.id}')" href="#" class="button" data-bs-toggle="modal" data-bs-target="#AiDetailModal"><i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
