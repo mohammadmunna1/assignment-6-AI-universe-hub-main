@@ -1,0 +1,8 @@
+.button {
+    background-color: #ffb67e75; 
+    border: none;
+    color: rgba(255, 132, 0, 0.946);
+    padding: 10px;
+    text-align: center;
+    border-radius: 40%;
+  }
