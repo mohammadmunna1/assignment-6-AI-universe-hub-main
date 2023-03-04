@@ -60,3 +60,11 @@ const toggleSpinner = isLoading => {
         spinnerSection.classList.add('d-none');
     }
 }
+
+// detailes more button
+document.getElementById('see-more-button').addEventListener('click', function () {
+    toggleSpinner(true);
+    const cardContainer = document.getElementById('card-container');
+    cardContainer.textContent = '';
+    loadAiInformation();
+})
