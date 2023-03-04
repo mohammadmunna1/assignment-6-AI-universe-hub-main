@@ -145,4 +145,20 @@ for (let i = 0; i < Object.keys(info.features).length; i++) {
     feature.appendChild(listItem);
 }
 
+//Pushing list items 2
+const integration = document.getElementById('integration');
+if (info.integrations !== null) {
+    for (let i = 0; i < info.integrations.length; i++) {
+        const listItem = document.createElement('li');
+        listItem.innerText = `${info.integrations[i]}`
+        integration.appendChild(listItem);
+    }
+}
+else {
+    const listItem = document.createElement('li');
+    listItem.innerText = `No Data Found`
+    console.log('No data found');
+    integration.appendChild(listItem);
+}
+
 
