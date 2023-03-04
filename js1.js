@@ -27,6 +27,8 @@ const displayAiInformation = (info, dataLimit, sortDataByDate) => {
         seeMoreButton.classList.add('d-none');
     }  
 
+
+    //Sorting by Date
     document.getElementById('date-button').addEventListener('click', async () => {;
         const sortedData = info.sort((a, b) => new Date(a.published_in) - new Date(b.published_in));
         toggleSpinner(true);
@@ -40,3 +42,11 @@ const displayAiInformation = (info, dataLimit, sortDataByDate) => {
         return;
         });
     });
+
+//without sorting by date 
+
+    info.forEach(data => {
+        processData(data);
+        toggleSpinner(false);
+    });
+}
